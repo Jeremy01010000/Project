@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, rgb(186, 43, 43), #000);
+        }
+
+        h1 {
+            color: #FFF;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #db343400;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(170, 41, 185);
+            border-radius: 200px;
+        }
+        .btn-neon{
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            color: #f5f5f5;
+            width: 180px;
+            transition: 1s;
+            transition-delay: .8s;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .btn-neon:hover{
+            box-shadow: 0 0 10px #ff6f61,
+                        0 0 40px #ff6f61,
+                        0 0 80px #ff6f61;
+            background-color: #ff6f61;
+        }
+        
+        .btn-neon:hover polyline{
+            stroke-dashoffset: -460;
+        }
+        
+        .btn-neon svg{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .btn-neon svg polyline{
+            fill: transparent;
+            stroke: #ff6f61;
+            stroke-width: 2px;
+            stroke-dasharray: 40 460;
+            stroke-dashoffset: 40;
+            transition:  .8s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>LA Crimes Maps</h1>
+    <p>Choose an option:</p>
+
+    <div class="button-container">
+        <a href="/heatmap" class="btn-neon">
+            Heatmap
+            <svg height="50" width="180">
+              <polyline points="0,0 180,0 180,50 0,50 0,00">
+              </polyline>
+            </svg>
+          </a>
+
+          <a href="/LA" class="btn-neon">
+            LA Crimes
+            <svg height="50" width="180">
+              <polyline points="0,0 180,0 180,50 0,50 0,00">
+              </polyline>
+            </svg>
+          </a>
+    </div>
+</body>
+</html>
